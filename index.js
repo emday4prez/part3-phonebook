@@ -52,8 +52,8 @@ app.use(morgan(':method :url :status :res[content-length] - :response-time ms :p
 app.get('/api/persons/:id', (req,res) => {
   const id = +req.params.id
   
-  const person = persons.find(person => { 
-  return person.id === id})
+  const person = persons.find(p => { 
+  return p.id === id})
     if(person){
       res.json(person)
     }else{
